@@ -1,0 +1,503 @@
+$bodycolor: #b3d9ff;
+$accent-color: #203c70; //rgb(197, 5, 197)
+$contrast-color: white;
+$a-topandbottom-padding: 5px;
+$a-hover-border-width: 1px;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* border: 2px dotted green; */
+}
+html {
+    font-size: 10px;
+    width: 100vw;
+    min-width: 320px;
+    width: 100vw;
+    
+}
+
+body {
+    width: 100vw;
+    font-family: georgia;
+    align-content: center;
+    background-color: $bodycolor; /*rgb(0, 54, 0);*/
+}
+main {
+    position: relative;
+    top: 110px;
+    left: 0;
+    width: 100vw;
+    background-color: $bodycolor;
+}
+/* main div:first-child {
+    height: 100px;
+}  */
+
+#header { 
+    display: grid;
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-self: center;
+    grid-auto-flow: column;
+    width: 100vw;
+    height: 100px;
+    background-color: $contrast-color;
+    grid-auto-flow: column;
+    text-align: center;
+    font-family: impact;
+    grid-template-areas: " logobox nav-bar";
+    /* grid-template-columns: 30% 70%; */
+    z-index: 4;
+}
+/* p {
+    visibility: hidden;
+    display: none;
+} */
+#logobox {
+    grid-area: logobox;
+    display: grid;
+    justify-self: center;
+    align-self: center;
+    grid-auto-flow: row;
+    gap: 0;
+    grid-template-rows: 3fr 1fr;
+    text-align: center;
+}
+#logobox div:nth-child(2) {
+    font-size: 1.5rem;
+    color: $accent-color;
+}
+
+#nav-bar {
+    grid-area: nav-bar;
+    display: grid;
+    width: 90%;
+    max-width: 530px;
+    justify-self: left;
+    justify-content: left;
+    align-self: center;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-areas: "s1 s2 s3";
+    padding: 1em 1em auto;
+    margin-top: 0px;
+}
+#nav-bar div {
+    padding: 5px 10px;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.nav-link {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 1.5rem;
+} 
+
+a {
+    text-decoration: none;  
+    /*do usunięcia podkreśenia pod linkami*/
+     color: black;
+    padding: $a-topandbottom-padding 10px;
+    margin: 15px 0;
+}
+header a:hover {
+    color:  $accent-color;
+    padding: $a-topandbottom-padding 10px calc($a-topandbottom-padding - $a-hover-border-width);
+    border-bottom: $a-hover-border-width solid  $accent-color;
+} 
+
+
+#header-img {
+    height: auto;
+    width: 60px;
+}
+
+#welcome-section {
+    /* min-height: 100vh; */
+    /* overflow: hidden; */
+    min-height: auto;
+    padding-bottom: 40px;
+}
+ #welcome-section div:nth-child(1) {
+    text-align: center;
+    font-size: 4rem;
+    margin: 5% auto;
+    color: $accent-color;
+} 
+/* #welcome-section div:nth-child(2)::before {
+    display: block;
+    float: left;
+    width: 10%;
+} */
+#welcome-section div:nth-child(2) {
+    /* for positioning iframe:
+     margin: calc(56.25 * 5 / 3) 20%; 
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 
+    // height: 0;*/ 
+    max-width: 90%;
+    margin: auto 15%;
+    
+} 
+/* #welcome-section div:nth-child(2)::after {
+    display: block;
+    float: left;
+    width: 10%;
+} */
+// #video {
+//     position: absolute;
+//     top: 15%;
+//     left: 15%;
+//     width: 70%;
+//     height: 70%;
+// }
+#video0 { 
+    width: 100%;
+}
+label {
+    font-size: .7rem;
+    font-family: monospace;
+    display: block;
+    color: $accent-color;
+    padding-top: 5px;
+}
+label>a {
+    padding: 0;
+    color: $accent-color;
+
+}
+// #welcome-section::after {
+//     content: "";
+//     display: block;
+//     height: 20px;
+    /* clear: both; */
+// }
+#offer {
+    /* min-height: 100vh; */
+    display: block;
+    /* float: left; */
+    background-color:$contrast-color;
+    padding: 40px 7% 40px;
+
+} 
+#offer h1 {
+    text-align: center;
+    font-size: 3rem;
+    display: block;
+    padding: 15% auto;
+    margin: 10% auto 5%;
+    color: #4c7297;
+} 
+#offer span{
+    text-transform: uppercase;
+}
+
+
+#offer>div:nth-child(2) {
+    display: grid;
+    grid-auto-flow: column;
+    padding-bottom: 10%; 
+}
+#offer>div:nth-child(2)>div {
+    margin: 10px;
+    align-self: center;
+    color: $accent-color;
+    border: 2px solid $accent-color;
+
+    padding: 10px 20px;
+    line-height: 2rem;
+    min-height: 80%;
+}
+#offer>div:nth-child(2)>div:hover {
+    /* color: $contrast-color; */
+    //border: 1px solid $bodycolor;
+    background-color: $bodycolor;
+}
+
+ 
+li::marker {
+    padding: 0 10%;
+}
+#offer>div:nth-child(2)>div div:first-child {
+    /* border: 2px solid green; */
+    padding: 15px 0 15px 20px;
+    padding-left: 20px;
+}
+#offer>div:nth-child(2)>div div:last-child {
+    /* border: 2px solid red; */
+    margin: 0 25%;
+    padding-bottom: 10px;
+    max-width: 25vw;
+}
+#offer button {
+    margin: 10px auto;
+    border-radius: 0;
+    border-width: 0;
+    /* border: 2px solid $accent-color; */
+    background-color:  $accent-color;
+    color: $contrast-color;
+    padding: 4px 7px;
+    width: 100%;
+}
+#offer button:hover {
+    /* border-color: $accent-color; */
+    background-color: $contrast-color;
+    color: $accent-color;
+}
+/* h3 {
+    text-align: center;
+    padding: 5px 0px 5px 0px;
+} */
+
+/*
+
+#p0 {
+    grid-area: a0;
+    width: 30vw;
+}
+
+#napis {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    font-family: georgia;
+    font-size: 5rem;
+    font-weight: bold;
+    color: orange;
+}
+
+
+*/
+
+#bars {
+    display: none;
+    color: $accent-color;
+    width: 50px;
+    height: 50px;
+    /* background-color: red; */
+    float: left;
+    font-size: 40px
+}
+
+header:last-child::after {
+    content: "";
+    display: block;
+    clear: "left";
+}
+/* section:nth-child(1) {
+    max-height: calc(100vh - 108px);
+} */
+
+section:nth-child(2) {
+    height: max-content; //fit-content;
+    padding: 100px;
+}
+
+section:nth-child(3) {
+    min-height: fit-content; //calc(100vh - 108px);
+    padding: 10% 0;
+}
+
+#where {
+    // font-family: impact;
+    // letter-spacing: 1px;
+    font-size: .8rem;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns:  50% 50%;
+    background-color: $accent-color;
+    padding: 5% 10%;
+    // justify-self: center;
+    justify-content: center;
+    color: $contrast-color;
+    background-image: repeating-linear-gradient(
+        45deg,
+        $accent-color,
+        $accent-color 10px,
+        $contrast-color 10px,
+        $contrast-color 20px
+    );
+    gap: 0;
+}
+
+#where div{
+display: block;
+padding: 10% 10%;
+ background-color: $accent-color;
+//  font-size: 1.5rem;
+ //  border: 1px solid red;
+}
+
+// #where div * {
+//     margin: auto 10%;
+// }
+
+#where * {
+    display: block;
+    font-size: 1.5rem;
+}
+
+textarea, input {
+    width: 80%;
+    background-color: $bodycolor;
+    color: $accent-color;
+    margin: 15px 10%;
+    border: $bodycolor;
+    font-family: monospace;
+    padding: 5px;
+    &::placeholder { 
+       color: darkslategray;
+    &:focus { 
+        outline: none;
+        // border: 1px solid $contrast-color;
+        box-shadow: none;
+    }
+}
+}
+textarea {
+    resize: vertical;
+}
+
+#submit.btn {
+    background-color: $contrast-color;
+    color: $accent-color;
+    border: 1px solid $accent-color; 
+    width: fit-content;
+    height: auto;
+    margin: auto;
+    padding: 5px 10px;
+    justify-content: center;
+}
+#submit.btn:hover {
+    background-color: $accent-color;
+    color: $contrast-color;
+    border: 1px solid $contrast-color; 
+}
+
+
+
+/*
+border of textarea:
+https://stackoverflow.com/questions/16156594/how-to-change-border-color-of-textarea-on-focus
+fixed dimmensions of textarea:
+https://stackoverflow.com/questions/5271782/how-to-disable-the-resize-grabber-of-textarea */
+
+    
+
+
+
+ @media screen  and (max-width: 600px) {
+
+    #header {
+        grid-auto-flow: row;
+        grid-template-areas: "logobox" "nav-bar";
+        grid-template-columns: 100%;
+        /* grid-template-rows: auto-fit auto-fit; */
+        height: auto;
+        border-bottom: 1px solid $accent-color;
+
+    }
+
+    #bars {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    /* #nav-bar {
+        display: none;
+    } */
+    /* p {
+        width: 400px;
+        height: 300px;
+        visibility: visible;
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        color: green;
+        z-index: 3;
+    } */
+    #logobox::after {
+        display: static;
+        content: "";
+    }
+    main {
+        position: relative;
+        top: 110px;//było 170px
+        left: 0;
+        width: 100vw;
+    }
+    #nav-bar {
+        display:none;
+        color: black;
+        grid-auto-flow: column; 
+        justify-content: center;
+        align-self: center; 
+        /* grid-template-rows: 30% 30% 30%; */
+        grid-template-columns: 1fr;
+        grid-template-areas: "s1" "s2" "s3";
+        justify-self: center;
+    }
+
+    #welcome-section div:nth-child(1) {
+        font-size: 2.5rem;
+    } 
+
+    #welcome-section div:nth-child(2) {
+        min-height: 300px;
+        // margin: 5% 4%;
+    } 
+
+    // #video {
+    //     top: 5%;
+    //     left: 5%;
+    //     width: 90%;
+    //     height: 90%;
+    // }
+    #video0 {
+        width: 100%;
+    }
+
+    #offer> div:nth-child(2) {
+        display: grid;
+        grid-auto-flow: row; 
+        grid-template-columns: auto;  
+    } 
+
+    #where {
+        grid-auto-flow: row;
+        grid-template-rows: auto auto;
+        grid-template-columns: 100%;
+    }
+
+    #where div:nth-child(2) {
+        margin: 50px auto;
+        justify-self: center;
+        width: 100%;
+        & p {
+            overflow-wrap: break-word;
+        }
+    }
+
+}
+
+footer {
+    background-color: $contrast-color /*rgb(0, 54, 0)*/;
+    text-align: center;
+    color: $accent-color;
+    padding: 15px 30px 15px 30px;
+    font-size: 1.5rem;
+    /* position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0; */
+} 
