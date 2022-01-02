@@ -14,7 +14,7 @@ menuBars.addEventListener('click', ()=>{
     
 }, false)
 // ok --- remove visibility of icon bars when nawigation/menu is visible 
-const notnavbar = document.querySelector("main");
+const notnavbar = document.querySelectorAll("main *");
 
 const showBars = ()=>{
   
@@ -24,10 +24,12 @@ const showBars = ()=>{
        menuBars.style.display = "block";
    }
 }
-  
-notnavbar.addEventListener('click', 
-showBars()
+notnavbar.forEach(element => {element.addEventListener('click', 
+() =>{
+    showBars();
+}
 , false)
+});
 
 // ok - after opening navigation when width <mediaQuery, when user accelerate width of window and returns to window with < mediaQuery, there shouldn't be visible opened nawigation
 window.addEventListener("resize", ()=> {
