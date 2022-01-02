@@ -159,3 +159,29 @@ contact.addEventListener('click', ()=>{
     //  console.log("full dim", dimm)
      if(window.innerWidth <= mediaQuery) showBars()
     } )
+
+
+    console.log(document.documentElement.scrollHeight)
+    console.log(window.innerHeight)
+    console.log(window.visualViewport.pageTop)
+const upButton = document.getElementsByClassName("up")[0];
+
+const body = document.getElementsByTagName("body")
+console.log(upButton)
+
+window.addEventListener('scroll',
+    ()=>{
+        if(window.visualViewport.pageTop > 3/4 * window.innerHeight ){ 
+            upButton.style.display = "grid";
+        } 
+        // console.log(upButton.style.display);
+        if(window.visualViewport.pageTop <= 3/4 * window.innerHeight ){ 
+            upButton.style.display = "none";
+        } 
+})
+
+upButton.addEventListener('click',
+()=>{
+    window.scrollTo(0, 0);
+    upButton.style.display = "none";
+})
