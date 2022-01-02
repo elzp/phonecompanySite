@@ -110,7 +110,7 @@ a {
 }
 header a:hover {
     color:  $accent-color;
-    padding: $a-topandbottom-padding 10px calc($a-topandbottom-padding - $a-hover-border-width);
+    padding: $a-topandbottom-padding 10px 4px; //calc( $a-topandbottom-padding - $a-hover-border-width );
     border-bottom: $a-hover-border-width solid  $accent-color;
 } 
 

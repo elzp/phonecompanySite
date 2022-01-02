@@ -112,7 +112,7 @@ a {
 
 header a:hover {
   color: #203c70;
-  padding: 5px 10px calc($a-topandbottom-padding - $a-hover-border-width);
+  padding: 5px 10px 4px;
   border-bottom: 1px solid #203c70;
 }
 
